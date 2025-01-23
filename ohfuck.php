@@ -64,12 +64,17 @@ function selfCheck() {
     }
 }
 
-foreach ($sites as $site) {
-    if (isSiteDown($site)) {
-        $message = "Site is down: $site";
-        sendAlert($message);
-    } else {
-        echo "Site is up: $site\n";
+function run($sites) {
+    foreach ($sites as $site) {
+        if (isSiteDown($site)) {
+            $message = "Site is down: $site";
+            sendAlert($message);
+        } else {
+            echo "Site is up: $site\n";
+        }
     }
     selfCheck();
 }
+
+run($sites);
+
