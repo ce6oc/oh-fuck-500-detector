@@ -1,7 +1,8 @@
 <?php
 date_default_timezone_set('Europe/Moscow');
 
-$config = json_decode(file_get_contents('config.json'), true);
+$config_file = __DIR__ . '/config.json';
+$config = json_decode(file_get_contents($config_file), true);
 
 if (json_last_error() !== JSON_ERROR_NONE) {
     die("Error parsing config.json: " . json_last_error_msg());
