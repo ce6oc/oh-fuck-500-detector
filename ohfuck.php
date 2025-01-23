@@ -60,14 +60,14 @@ function sendAlert($message) {
 function selfCheck() {
     global $webhookUrl, $self_check_time;
     if (date("H:i") === $self_check_time) {
-        sendAlert('РАБОТАЕМ');
+        sendAlert('🤠 PA6OTAEM');
     }
 }
 
 function run($sites) {
     foreach ($sites as $site) {
         if (isSiteDown($site)) {
-            $message = "Site is down: $site";
+            $message = "🤬 OH FUCK 500: $site";
             sendAlert($message);
         } else {
             echo "Site is up: $site\n";
