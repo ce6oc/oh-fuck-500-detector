@@ -1,0 +1,10 @@
+{
+    "sites": [
+        "https://duckduckgo.com",
+        "https://nonexistent-site123.com"
+    ],
+    "webhook_url": "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage",
+    "token": "",
+    "chat_id": "",
+    "self_check_time": "10:00"
+}
