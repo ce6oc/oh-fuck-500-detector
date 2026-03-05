@@ -1,10 +1,19 @@
 {
-    "sites": [
-        "https://duckduckgo.com",
-        "https://nonexistent-site123.com"
-    ],
-    "webhook_url": "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage",
-    "token": "",
-    "chat_id": "",
+  "sites": [
+    "https://example.com",
+    "https://api.example.com/health",
+    "https://shop.example.com"
+  ],
+  "telegram": {
+    "token_env": "TELEGRAM_BOT_TOKEN",
+    "chat_id": 123456789,
+    "webhook_template": "https://api.telegram.org/bot$TOKEN/sendMessage",
+    "token": "TELEGRAM_BOT_TOKEN"
+  },
+  "settings": {
+    "timeout": 15,
+    "alert_cooldown_minutes": 60,
+    "max_retries": 2,
     "self_check_time": "10:00"
+  }
 }
