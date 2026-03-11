@@ -150,7 +150,8 @@ function sendAlert(string $message): bool {
         $data = [
             'chat_id' => $chatId,
             'text' => $message,
-            'parse_mode' => 'HTML'
+            'parse_mode' => 'HTML',
+            'disable_web_page_preview' => true
         ];
         
         $ch = curl_init($webhookUrl);
